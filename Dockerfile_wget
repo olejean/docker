@@ -1,0 +1,6 @@
+FROM ubuntu
+WORKDIR /tmp/favicon/
+RUN apt update
+RUN  apt-get install -y wget && wget -r https://kaggle.com/favicon.ico
+ENTRYPOINT /bin/bash
+
